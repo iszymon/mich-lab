@@ -53,10 +53,10 @@ spec:
           hostPath:
             path: /filebrowser
           pvc:
-            storageClassName: "openebs-lvmpv"
+            storageClassName: "local-path"
             size: 10Gi
         db:
           pvc:
             enabled: true
-            storageClassName: "openebs-lvmpv"
+            storageClassName: "local-path"
             size: 256Mi
