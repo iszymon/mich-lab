@@ -28,7 +28,7 @@
 #         nameOverride: postgresql
 #         fullnameOverride: postgresql
 #         global:
-#           defaultStorageClass: "openebs-lvmpv"
+#           defaultstorageClass: "local-path"
 #         primary:
 #           extendedConfiguration: |-
 #             max_connections = 300

@@ -20,7 +20,7 @@
 #     - PruneLast=true
 #   source:
 #     path: 'argocd/helm/crawl4ai'
-#     repoURL: https://github.com/lewandowskim1988/home-lab.git
+#     repoURL: https://github.com/iszymon/mich-lab.git
 #     targetRevision: HEAD
 #     helm:
 #       values: |-
@@ -33,11 +33,11 @@
 #             nginx.ingress.kubernetes.io/ssl-redirect: "true"
 #           className: "nginx"
 #           hosts:
-#             - host: crawl4ai.lewandowskim.com
+#             - host: crawl4ai.idena.wf
 #               paths:
 #                 - path: /
 #                   pathType: ImplementationSpecific
 #           tls:
 #             - hosts:
-#                 - crawl4ai.lewandowskim.com
-#               secretName: tls-wildcard-lewandowskim-com
+#                 - crawl4ai.idena.wf
+#               secretName: tls-wildcard-idena-wf

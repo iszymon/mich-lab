@@ -33,15 +33,15 @@ spec:
             nginx.ingress.kubernetes.io/ssl-redirect: "true"
           ingressClassName: "nginx"
           hosts:
-            - host: pgadmin.lewandowskim.com
+            - host: pgadmin.idena.wf
               paths:
                 - path: /
                   pathType: Prefix
           tls:
             - hosts:
-                - pgadmin.lewandowskim.com
-              secretName: tls-wildcard-lewandowskim-com
+                - pgadmin.idena.wf
+              secretName: tls-wildcard-idena-wf
         persistentVolume:
           size: 1Gi
-          storageClass: "openebs-lvmpv"
+          storageClass: "local-path"
         extraDeploy: []

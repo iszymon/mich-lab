@@ -20,7 +20,7 @@ spec:
     - PruneLast=true
   source:
     path: 'argocd/helm/filebrowser'
-    repoURL: https://github.com/lewandowskim1988/home-lab.git
+    repoURL: https://github.com/iszymon/mich-lab.git
     targetRevision: HEAD
     helm:
       values: |-
@@ -34,14 +34,14 @@ spec:
             nginx.ingress.kubernetes.io/ssl-redirect: "true"
             nginx.ingress.kubernetes.io/proxy-body-size: "64m"
           hosts:
-            - host: filebrowser.lewandowskim.com
+            - host: filebrowser.idena.wf
               paths:
                 - path: /
                   pathType: ImplementationSpecific
           tls:
             - hosts:
-                - filebrowser.lewandowskim.com
-              secretName: tls-wildcard-lewandowskim-com
+                - filebrowser.idena.wf
+              secretName: tls-wildcard-idena-wf
         resources:
           limits:
             cpu: 150m

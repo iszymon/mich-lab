@@ -46,9 +46,9 @@
 #               annotations:
 #                 nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
 #                 nginx.ingress.kubernetes.io/ssl-redirect: "true"
-#               host: mattermost.lewandowskim.com
+#               host: mattermost.idena.wf
 #               ingressClass: nginx
-#               tlsSecret: tls-wildcard-lewandowskim-com
+#               tlsSecret: tls-wildcard-idena-wf
 #             replicas: 1
 #             scheduling:
 #               resources:
@@ -60,6 +60,6 @@
 #                   memory: 700Mi
 #             mattermostEnv:
 #               - name: MM_SERVICESETTINGS_ALLOWEDUNTRUSTEDINTERNALCONNECTIONS
-#                 value: "n8n.lewandowskim.com"
+#                 value: "n8n.idena.wf"
 
 

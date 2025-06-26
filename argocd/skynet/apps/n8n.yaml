@@ -36,24 +36,24 @@ spec:
             nginx.ingress.kubernetes.io/ssl-redirect: "true"
           className: "nginx"
           hosts:
-            - host: n8n.lewandowskim.com
+            - host: n8n.idena.wf
               paths:
                 - "/"
           tls:
             - hosts:
-                - n8n.lewandowskim.com
-              secretName: tls-wildcard-lewandowskim-com
+                - n8n.idena.wf
+              secretName: tls-wildcard-idena-wf
         main:
           persistence:
             enabled: true
             type: dynamic
-            storageClass: "openebs-lvmpv"
+            storageClass: "local-path"
             size: 5Gi
           extraEnv:
             N8N_EDITOR_BASE_URL:
-              value: "https://n8n.lewandowskim.com"
+              value: "https://n8n.idena.wf"
             WEBHOOK_URL:
-              value: "https://n8n.lewandowskim.com"
+              value: "https://n8n.idena.wf"
           extraVolumes:
             - name: share
               persistentVolumeClaim:

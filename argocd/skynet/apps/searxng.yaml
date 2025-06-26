@@ -46,7 +46,7 @@ spec:
         #     ingressClassName: "nginx"
         #     hosts:
         #       -
-        #         host: searxng.lewandowskim.com
+        #         host: searxng.idena.wf
         #         paths:
         #           -
         #             path: "/"
@@ -56,8 +56,8 @@ spec:
         #               port: 8080
         #     tls:
         #       - hosts:
-        #         - searxng.lewandowskim.com
-        #       secretName: tls-wildcard-lewandowskim-com
+        #         - searxng.idena.wf
+        #       secretName: tls-wildcard-idena-wf
         searxng:
           config:
             use_default_settings: true

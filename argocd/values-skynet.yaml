@@ -20,7 +20,7 @@ extraObjects:
         - CreateNamespace=true
       source:
         path: argocd/skynet
-        repoURL: https://github.com/lewandowskim1988/home-lab.git
+        repoURL: https://github.com/iszymon/mich-lab.git
         targetRevision: HEAD
         directory:
           recurse: true

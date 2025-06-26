@@ -28,28 +28,28 @@ spec:
         nameOverride: keycloak
         fullnameOverride: keycloak
         global:
-          storageClass: "openebs-lvmpv"
+          storageClass: "local-path"
         auth:
           adminUser: admin
           adminPassword: "7d38ecc447d4c1ddbb8622c5"
         ingress:
           enabled: true
           ingressClassName: nginx
-          hostname: keycloak.lewandowskim.com
+          hostname: keycloak.idena.wf
           annotations:
             nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
             nginx.ingress.kubernetes.io/ssl-redirect: "true"
           tls: true
           extraTls:
           - hosts:
-            - keycloak.lewandowskim.com
-            secretName: tls-wildcard-lewandowskim-com
+            - keycloak.idena.wf
+            secretName: tls-wildcard-idena-wf
         postgresql:
           enabled: true
           auth:
             password: "71f3f940c086d06995dc095d"
         extraEnvVars:
           - name: KC_HOSTNAME_URL
-            value: "https://keycloak.lewandowskim.com"
+            value: "https://keycloak.idena.wf"
           - name: KC_HOSTNAME_ADMIN_URL
-            value: "https://keycloak.lewandowskim.com"
+            value: "https://keycloak.idena.wf"

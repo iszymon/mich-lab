@@ -98,11 +98,11 @@ spec:
               kubernetes.io/ingress.class: nginx
             pathType: Prefix
             hosts:
-              - monitoring.lewandowskim.com
+              - monitoring.idena.wf
             tls:
             - hosts:
-              - monitoring.lewandowskim.com
-              secretName: tls-wildcard-lewandowskim-com
+              - monitoring.idena.wf
+              secretName: tls-wildcard-idena-wf
           defaultDashboardsTimezone: cet
         extraObjects:
           - apiVersion: v1

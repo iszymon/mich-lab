@@ -27,7 +27,7 @@ spec:
         nameOverride: argocd
         fullnameOverride: argocd
         global:
-          domain: argocd.lewandowskim.com
+          domain: argocd.idena.wf
         extraObjects:
           - apiVersion: argoproj.io/v1alpha1
             kind: Application
@@ -49,7 +49,7 @@ spec:
                 - CreateNamespace=true
               source:
                 path: argocd/skynet
-                repoURL: https://github.com/lewandowskim1988/home-lab.git
+                repoURL: https://github.com/iszymon/mich-lab.git
                 targetRevision: HEAD
                 directory:
                   recurse: true
@@ -123,11 +123,11 @@ spec:
               nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
               nginx.ingress.kubernetes.io/ssl-passthrough: "true"
             ingressClassName: "nginx"
-            hostname: argocd.lewandowskim.com
+            hostname: argocd.idena.wf
             extraTls:
               - hosts:
-                - argocd.lewandowskim.com
-                secretName: tls-wildcard-lewandowskim-com
+                - argocd.idena.wf
+                secretName: tls-wildcard-idena-wf
         repoServer:
           autoscaling:
             enabled: true
